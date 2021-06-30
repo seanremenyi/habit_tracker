@@ -18,10 +18,10 @@ graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
 
 graph_config = {
     "id": GRAPH_ID,
-    "name": "Running Graph",
-    "unit": "Km",
+    "name": "{title of graph}",
+    "unit": "{measurement unit}",
     "type": "float",
-    "color": "ajisai"
+    "color": "{color, note it is with japanese names}"
 }
 
 headers = {
@@ -35,7 +35,7 @@ today = datetime.now()
 
 pixel_data = {
     "date" : today.strftime("%Y%m%d"),
-    "quantity": "5.3",
+    "quantity": "{quantity of the habit you are tracking}",
 }
 
 response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
